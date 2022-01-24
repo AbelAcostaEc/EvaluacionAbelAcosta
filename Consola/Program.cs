@@ -9,7 +9,7 @@ namespace Consola
     {
         static void Main(string[] args)
         {
-            //Instancia Paises
+            // Paises
             Country Ecuador = new Country() { country = "Ecuador", Last_update = DateTime.Now };
             Country Peru = new Country() { country = "Peru", Last_update = DateTime.Now };
             Country Colombia = new Country() { country = "Colombia", Last_update = DateTime.Now };
@@ -89,49 +89,49 @@ namespace Consola
 
             Address address7 = new Address()
             {
-                address = "Colon S8-376",
+                address = "Oberföhringer Str. 45",
                 address2 = "",
-                district = "Mariscal",
-                City = Quito,
-                postal_code = "250635",
-                phone = "0986539847",
+                district = "München",
+                City = Munich,
+                postal_code = "81925",
+                phone = "49899984790",
                 Last_update = DateTime.Now
             };
             Address address8 = new Address()
             {
-                address = "Colon S8-376",
+                address = "Herzog-Heinrich-Straße 23",
                 address2 = "",
-                district = "Mariscal",
-                City = Quito,
-                postal_code = "250635",
-                phone = "0986539847",
+                district = "München",
+                City = Munich,
+                postal_code = "80336 ",
+                phone = "498913928880",
                 Last_update = DateTime.Now
             };
             Address address9 = new Address()
             {
-                address = "Colon S8-376",
+                address = "Portete y la 26",
                 address2 = "",
-                district = "Mariscal",
-                City = Quito,
-                postal_code = "250635",
-                phone = "0986539847",
+                district = "Portete",
+                City = Guayaquil,
+                postal_code = "1706398",
+                phone = "0912365234",
                 Last_update = DateTime.Now
             };
             Address address10 = new Address()
             {
-                address = "Colon S8-376",
+                address = "9 de Ocutbre 5639",
                 address2 = "",
-                district = "Mariscal",
-                City = Quito,
-                postal_code = "250635",
-                phone = "0986539847",
+                district = "Malecón",
+                City = Guayaquil,
+                postal_code = "1706898",
+                phone = "098452478",
                 Last_update = DateTime.Now
             };
 
 
             List<Address> ListaDirecciones = new List<Address> { address, address2, address3,address4,address5,address6,address7,address8,address9,address10 };
             EvaluacionDB  repos = new EvaluacionDB();
-            repos.Addresses.AddRange(ListaDirecciones)
+            repos.Addresses.AddRange(ListaDirecciones);
             repos.SaveChanges();
         }
     }
